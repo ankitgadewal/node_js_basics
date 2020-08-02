@@ -1,0 +1,20 @@
+<%- include('Header'); -%>
+
+<html>
+    <head>
+        <title>Ejs Profile File</title>
+    </head>
+    <link rel="stylesheet" href="../assets/style.css">
+    <body>
+        <h1>This is Profile Page Using Ejs welcome Mr. <%- name %></h1>
+        <p>
+            <%= data.email %> <br>
+            <%= data.name %> <br>
+            <ul>
+                <% data.skills.forEach(function(item){%>
+                    <li><%= item %></li>
+                <%}) %>
+            </ul>
+        </p>
+    </body>
+</html>
